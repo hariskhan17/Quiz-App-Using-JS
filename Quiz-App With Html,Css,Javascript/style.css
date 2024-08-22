@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #001e4d,
+    #00509e
+  ); /* Gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 1s ease-out;
+  text-align: center; /* Center text alignment */
+}
+
+.app h1 {
+  font-size: 32px;
+  color: #001e4d;
+  font-weight: 700;
+  border-bottom: 3px solid #00509e;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 24px;
+  color: #001e4d;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.btn {
+  background: #f9f9f9;
+  color: #333;
+  font-weight: 500;
+  width: 100%;
+  border: 2px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover:not([disabled]) {
+  background: #00509e;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#next-btn {
+  background: #00509e;
+  color: #fff;
+  font-weight: 600;
+  width: 180px;
+  border: 0;
+  padding: 15px;
+  margin: 20px auto 0;
+  border-radius: 12px;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#next-btn:hover {
+  background: #003d7a;
+  transform: scale(1.05);
+}
+
+.correct {
+  background: #4caf50; /* Green */
+  color: #fff;
+  border: 2px solid #388e3c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.incorrect {
+  background: #f44336; /* Red */
+  color: #fff;
+  border: 2px solid #d32f2f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
